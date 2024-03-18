@@ -1,0 +1,7 @@
+langchain
+openai
+pinecone
+sentence-transformers
+streamlit
+streamlit-lottie
+st-copy-to-clipboard

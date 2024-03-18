@@ -5,3 +5,4 @@ sentence-transformers
 streamlit
 streamlit-lottie
 st-copy-to-clipboard
+streamlit_extras

@@ -1,6 +1,6 @@
 langchain
 openai
-pinecone
+pinecone-client
 sentence-transformers
 streamlit
 streamlit-lottie

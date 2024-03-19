@@ -135,52 +135,6 @@ if 'setup' not in st.session_state:
         st.write("OKAY I'M READY")
 
 
-
-# def main():
-    
- 
- 
-#     # upload a PDF file
-#     pdf = st.file_uploader("Upload your PDF", type='pdf')
- 
-#     # st.write(pdf)
-#     if pdf is not None:
-#         pdf_reader = upload_pdf(pdf_path)
-        
-#         text = ""
-#         for page in pdf_reader.pages:
-#             text += page.extract_text()
- 
-#         # text_splitter = RecursiveCharacterTextSplitter(
-#         #     chunk_size=1000,
-#         #     chunk_overlap=200,
-#         #     length_function=len
-#         #     )
-#         # chunks = text_splitter.split_text(text=text)
- 
-#         # # embeddings
-#         store_name = pdf.name[:-4]
-#         st.write(f'{store_name}')
-#         # st.write(chunks)
- 
-#         if os.path.exists(f"{store_name}.pkl"):
-#             with open(f"{store_name}.pkl", "rb") as f:
-#                 VectorStore = pickle.load(f)
-#             # st.write('Embeddings Loaded from the Disk')s
-#         else:
-#             embeddings = OpenAIEmbeddings()
-#             VectorStore = FAISS.from_texts(chunks, embedding=embeddings)
-#             with open(f"{store_name}.pkl", "wb") as f:
-#                 pickle.dump(VectorStore, f)
- 
-
-
-
-
-
-
-   
-   
 # Uploading pdf file
 
 st.divider()
@@ -213,62 +167,4 @@ with col2:
         st_copy_to_clipboard(summary)
 
         st.success("success!!!!👍") 
-# import streamlit as st
-# from langchain.prompts import PromptTemplate
-# # from langchain_text_splitters import TextSplitter
-# from langchain_pinecone import Pinecone, PineconeVectorStore
-# from model import initialize_retrieval_qa_chain, ask_question, initialize_conversation_memory, summarize_text, upload_pdf
-
-# # Set API keys and parameters (these should match the ones in your model.py file)
-# openai_api_key = 'LL-c8QuMCAefOGrl3pNb0GjfTbNm8Oz09YDW2AiI5RuMmldVfERMnxZJKB0saBzBUc7'
-# openai_base_url = "https://api.llama-api.com"
-# pinecone_api_key = '1c6bf2f6-c246-4ea6-b1e5-93a371713524'
-# pinecone_index_name = "praveen"
-# pdf_path = 'LLaMA2_Paper.pdf'
-# model_name = "all-MiniLM-L6-v2"
-
-# # Initialize components (you may need to adjust this based on your specific model initialization)
-# memory = initialize_conversation_memory()
-# prompt_template = """Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer. Use three sentences maximum. Keep the answer as concise as possible. Always say "thanks for asking!" at the end of the answer.
-#     {context}
-#     Question: {question}
-#     Helpful Answer:"""
-# qa_model = initialize_retrieval_qa_chain(openai_api_key, openai_base_url,memory, prompt_template)
-
-# # Function to handle file upload and process PDF
-# def process_pdf(file):
-#     if file is not None:
-#         pages = upload_pdf(file)
-#         # Process pages, extract text, etc.
-#         return pages
-#     else:
-#         return None
-
-# # Streamlit UI components
-# st.set_page_config(layout="wide")
-# st.title("Question Answering and Summarization App")
-
-# # File upload
-# file = st.file_uploader("Upload PDF File", type=['pdf'])
-
-# # Button to trigger PDF processing
-# if file is not None:
-#     if st.button("Process PDF"):
-#         pages = process_pdf(file)
-#         if pages:
-#             st.success("PDF processing complete!")
-#             # You can now use the 'pages' variable to display or process the PDF content further
-
-# # Question answering section
-# st.header("Question Answering")
-# question = st.text_input("Enter your question:")
-# if st.button("Ask"):
-#     answer = ask_question(qa_model, question)
-#     st.write("Answer:", answer)
-
-# # Summarization section
-# st.header("Text Summarization")
-# text = st.text_area("Enter the text to summarize:")
-# if st.button("Summarize"):
-#     summary = summarize_text(text)
-#     st.write("Summary:", summary)
+)

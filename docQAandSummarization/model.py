@@ -46,7 +46,7 @@ def initialize_embeddings_model(model_name):
 import pinecone
 
 # Initialize Pinecone with API key
-# pinecone_api_key = "1c6bf2f6-c246-4ea6-b1e5-93a371713524"
+# pinecone_api_key = "PLEASE SPECIFY YOUR PINECONE-API KEY"
 # pinecone.init(api_key=pinecone_api_key)
 # pinecone_instance = pinecone.Pinecone(api_key=pinecone_api_key)
 
@@ -60,7 +60,7 @@ def initialize_pinecone_index(api_key, index_name, dimension=384, metric='cosine
     #     pinecone.create_index(name=index_name, dimension=dimension, metric=metric, environment=environment)
     # except:
     #     print("INDEX CREATION FAILED")
-    # pinecone = Pinecone(api_key = '1c6bf2f6-c246-4ea6-b1e5-93a371713524')
+    # pinecone = Pinecone(api_key = 'PLEASE SPECIFY YOUR PINECONE-API KEY')
     pinecone = Pinecone(api_key = api_key)
     index_name = index_name
     print("initializing_pinecone_index")
@@ -130,9 +130,9 @@ def split_documents(pages):
     return chunks
 
 # Set API keys and parameters
-openai_api_key = 'LL-c8QuMCAefOGrl3pNb0GjfTbNm8Oz09YDW2AiI5RuMmldVfERMnxZJKB0saBzBUc7'
+openai_api_key = 'PLEASE SPECIFY YOUR OPENAI(LLAMA)-API KEY'
 openai_base_url = "https://api.llama-api.com"
-pinecone_api_key = '1c6bf2f6-c246-4ea6-b1e5-93a371713524'
+pinecone_api_key = 'PLEASE SPECIFY YOUR PINECONE-API KEY'
 pinecone_index_name = "praveen"
 pdf_path = 'LLaMA2_Paper.pdf'
 model_name = "all-MiniLM-L6-v2"

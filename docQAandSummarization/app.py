@@ -110,7 +110,7 @@ if 'setup' not in st.session_state:
         
 
     
-        # pdf_path = r"C:\Users\I7010\Documents\adv AI&ML\docQAandSummarization\LLaMA2_Paper.pdf"
+        
         pdf_path = save_file(file)
     
     with  st.spinner(spinn_content()):
